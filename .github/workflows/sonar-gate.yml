@@ -21,7 +21,7 @@ jobs:
       uses: warchant/setup-sonar-scanner@v7
     # Run sonar-scanner
     - name: SonarQube Scan
-      run: sonar-scanner
+      run: sonar-scanner \
           -Dsonar.projectKey=Astha1712_oct2023WeekdayRepo_AZOLDqefJyYznrUSK5v1\
           -Dsonar.sources=. \
           -Dsonar.host.url=http://127.0.0.1:9000 \
