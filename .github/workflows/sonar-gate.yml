@@ -29,8 +29,6 @@ jobs:
     # Step 3: Build with Maven
     - name: Build with Maven
       run: mvn install -f MyWebApp/pom.xml
-    - name: Test SonarQube Server Connectivity
-      run: curl -I http://192.168.2.94:9000
 
     - name: SonarQube Scan
       env:
@@ -41,7 +39,6 @@ jobs:
           -Dsonar.projectKey=Astha1712_oct2023WeekdayRepo_AZOLDqefJyYznrUSK5v1 \
           -Dsonar.sources=. \
           -Dsonar.host.url=$SONAR_HOST_URL \
-          -Dsonar.projectBaseDir=$GITHUB_WORKSPACE
           -Dsonar.login=$SONAR_TOKEN
 
     # Step 6: Check the Quality Gate status
