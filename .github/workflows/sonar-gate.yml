@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: mvn install -f MyWebApp/pom.xml
     - name: Test SonarQube Server Connectivity
-      run: curl -I http://your-sonarqube-server:9000
+      run: curl -I http://192.168.2.94:9000
 
     - name: SonarQube Scan
       env:
